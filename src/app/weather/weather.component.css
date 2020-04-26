@@ -1,0 +1,44 @@
+.mat-toolbar {
+  color: white;
+  background-color: #713939;
+}
+
+.title-center {
+  margin: 0 auto;
+}
+
+.example-container{
+    width: 100%;
+}
+
+
+.example-container .mat-form-field {
+  position: relative;
+  width: 40%;
+  left: 28%;
+  text-align: center;
+  margin-top: 8%;
+
+}
+
+.example-container .mat-icon {
+  position: absolute;
+  font-size: 54px;
+}
+
+.mat-icon-button {
+left: 25%;
+color: #713939;
+
+}
+
+.mat-card{
+    width: 50%;
+    left: 22%;
+    position: absolute;
+    right: 25%;
+}
+
+.display-card{
+    display: none;
+}

@@ -1,0 +1,50 @@
+<mat-toolbar>
+  <span class="title-center">Weather Application</span>
+</mat-toolbar>
+<!-- <mdb-icon fas icon="cloud-showers-heavy"></mdb-icon>     -->
+<!-- <button (click)="getLog()">clickMe</button>  -->
+
+<div class="example-container">
+  <form [formGroup]="options">
+    <mat-form-field [floatLabel]="floatLabelControl.value">
+      <mat-label>City/State</mat-label>
+      <input matInput placeholder="City/State" #cityVal>
+    </mat-form-field>
+    <button mat-icon-button (click)="getWeatherReport(cityVal.value);getDate()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </form>
+</div>
+
+
+<div [ngClass]="{'display-card': Status=='true'}">
+<mat-card style="text-align: center;">
+  <mat-card-title style="text-decoration: underline;">
+    {{weatherData}}
+  </mat-card-title>
+  <br>
+  <mat-card-content>
+    <mat-card-title>{{temp}} <span style='font-size:28px;'>&#8451;</span></mat-card-title>
+    <br>
+    <mat-card-title>{{weather | uppercase }}  </mat-card-title>
+    
+  </mat-card-content>
+  <mat-list dense style="position: absolute;">
+    <mat-list-item>Pressure : {{pressure}} hpa </mat-list-item>
+    <mat-list-item>Humidity : {{humidity}} %
+        
+    </mat-list-item>
+   </mat-list>
+   <mat-list dense style="float: right;">
+    <mat-list-item>Wind Speed :{{wind_speed}} </mat-list-item>
+    <mat-list-item> {{date}} </mat-list-item>
+   </mat-list>
+</mat-card>
+</div>
+<!-- <img width="64" [src]="https://image.flaticon.com/icons/svg/136/136723.svg" /> -->
+
+    <mat-toolbar style="position: fixed; bottom: 0%;">
+        <span class="title-center">Weather Application</span>
+      </mat-toolbar>
+
+
