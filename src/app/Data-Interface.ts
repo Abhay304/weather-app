@@ -1,7 +1,8 @@
 export interface Iweather {
     name : string;
-    main: [{
-        temp : string,
-        feels_like : string
-    }]
-}
+    main: {
+    temp: number,
+    pressure: number,
+    humidity: number
+        }
+    };

@@ -28,7 +28,7 @@
     public pressure = "";
     public wind_speed = "";
     public weather = "";
-    public temp :string;
+    public temp ="";
     
 
     getWeatherReport(value){
@@ -36,11 +36,11 @@
       this.cityName =value;
       this.WeatherService.getRequest(this.cityName)
       .subscribe((data : Iweather[]) => {
-        this.temp = data.main.temp;
-        this.humidity = data.main.humidity;
-        this.wind_speed = data.wind.speed;
-        this.pressure = data.main.pressure;
-        // // this.weather = data.weather[0].description;
+        this.humidity = data['main'].humidity;
+        this.temp =     data['main'].temp;
+        this.wind_speed = data['wind'].speed;
+        this.pressure = data['main'].pressure;
+        this.weather = data['weather'][0].main;
         this.weatherData = data;
       });
       
@@ -51,7 +51,9 @@
     }
 
     getLog(){
-        console.log(this.weatherData)
+        console.log(this.weatherData['main'].temp);
+        console.log(this.weatherData['weather'][0].main);
+
     }
     
     
