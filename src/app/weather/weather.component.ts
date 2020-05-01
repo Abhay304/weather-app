@@ -76,12 +76,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
     temperatureToggle(){
       if(this.celcius = ! this.celcius){
-        this.temp = Math.round(Number((this.weatherData['main'].temp * (9/5)) + 32)) ;
-        this.symbol = 'F';
 
-      }else{
         this.temp = this.weatherData['main'].temp;
         this.symbol = 'C';
+
+      }else{
+        this.temp = Math.round(Number((this.weatherData['main'].temp * (9/5)) + 32)) ;
+        this.symbol = 'F';
       }
       
     }
