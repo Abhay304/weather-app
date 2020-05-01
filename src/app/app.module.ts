@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { MaterailModule } from './materail/materail.module';
 import { ReactiveFormsModule } from '@angular/forms'
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     HttpClientModule,
     FormsModule,
     MaterailModule ,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
