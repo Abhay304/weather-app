@@ -30,7 +30,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     public pressure = "";
     public wind_speed = "";
     public weather = "";
-    public temp ="";
+    public temp;
+    public celcius = true;
+    public symbol ="C";
     // public errorMsg ="Welcome to weather Application";
 
     getWeatherReport(value){
@@ -70,6 +72,18 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     
     getDate(){
       this.date  = new Date().toDateString();
-    }    
+    }
+
+    temperatureToggle(){
+      if(this.celcius = ! this.celcius){
+        this.temp = Math.round(Number((this.weatherData['main'].temp * (9/5)) + 32)) ;
+        this.symbol = 'F';
+
+      }else{
+        this.temp = this.weatherData['main'].temp;
+        this.symbol = 'C';
+      }
+      
+    }
 
   }

@@ -33,7 +33,7 @@
     </mat-card-title>
     <br>
     <mat-card-content>
-      <mat-card-title>{{temp}} <span style='font-size:28px;'>&#8451;</span></mat-card-title>
+      <mat-card-title>{{temp}} <span style='font-size:28px;'>&#176; {{symbol}}</span></mat-card-title>
       <br>
       <mat-card-title>{{weather | uppercase }} </mat-card-title>
 
@@ -41,9 +41,9 @@
 
     <mat-list dense style="text-align: center;">
       <div fxLayout="row" fxLayoutAlign="space-between center" >
-      <mat-list-item fxFlex ="30">Pressure: {{pressure}} hpa </mat-list-item>
-      <mat-list-item fxFlex ="40"></mat-list-item>
-      <mat-list-item fxFlex ="30">Speed: {{wind_speed}} mph</mat-list-item>
+      <mat-list-item fxFlex ="40">Pressure: {{pressure}} hpa </mat-list-item>
+      <mat-list-item fxFlex ="20"></mat-list-item>
+      <mat-list-item fxFlex ="40">Speed: {{wind_speed}} mph</mat-list-item>
 
       
     </div>
@@ -51,13 +51,15 @@
     <br>
     <mat-list dense>
       <div fxLayout="row" fxLayoutAlign="space-between center" >
-      <mat-list-item fxFlex ="30">Humidity: {{humidity}} %</mat-list-item>
-      <mat-list-item fxFlex ="40"></mat-list-item>
-      <mat-list-item fxFlex ="30"> {{date}} </mat-list-item>
+      <mat-list-item fxFlex ="40">Humidity: {{humidity}} %</mat-list-item>
+      <mat-list-item fxFlex ="20"></mat-list-item>
+      <mat-list-item fxFlex ="40"> {{date}} </mat-list-item>
     </div>
     </mat-list>
+    <button (click)="temperatureToggle()" mat-raised-button class="btn-design">C / F</button>
     </mat-card>
     </div>
+
 
 <mat-toolbar style="position: fixed; bottom: 0%;">
   <span class="title-center">Weather Application</span>
