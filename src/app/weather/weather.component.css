@@ -7,12 +7,12 @@
   margin: 0 auto;
 }
 
-.example-container{
+.input-container{
     width: 100%;
 }
 
 
-.example-container .mat-form-field {
+.input-container .mat-form-field {
   position: relative;
   width: 40%;
   left: 28%;
@@ -21,7 +21,7 @@
 
 }
 
-.example-container .mat-icon {
+.input-container .mat-icon {
   position: absolute;
   font-size: 54px;
 }
@@ -34,11 +34,11 @@ color: #713939;
 
 .mat-card{
     width: 50%;
-    left: 22%;
     position: absolute;
-    right: 25%;
+    height: inherit;
 }
 
 .display-card{
-    display: none;
+    display: none !important;
 }
+
